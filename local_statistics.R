@@ -149,7 +149,7 @@ if(file.exists(data_path)){
     
     excurs = excursions::excursions.mc(var_array[,bs_indices], u = u, alpha = 0.5, type = ">")
     confidence_set = random.field(excurs$F, gen$grid)
-    theta_4 = sqrt(excursionArea(confidence_set, 0.5))
+    theta_4 = sqrt(excursionArea(confidence_set, 0.5) / pi)
     # plot(confidence_set, 0.5)
     
     # small_bs_indices = sample(N_small, replace = TRUE)
